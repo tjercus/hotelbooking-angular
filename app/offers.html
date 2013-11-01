@@ -1,0 +1,26 @@
+<div ng-controller="offersController">
+
+	<!-- TODO use ng-include for the pagesegments, so divide into partial templates -->
+
+	<h2>Offers</h2>
+
+	<ul id="offers-list">
+		<li ng-repeat="offer in offers">
+			<a ng-click="addOfferToCart(offer)">{{offer.name}} for {{offer.price}}</a>
+		</li>
+	</ul>
+
+	<h2>Your cart</h2>
+
+	<ul id="cart-list">
+		<li ng-repeat="offer in cart">
+			<a href='#' ng-click="removeOfferFromCart(offer)">remove</a> {{offer.name}} for {{offer.price}}
+		</li>
+	</ul>
+
+	<p id="amount-container">Amount: {{amount}}</p>
+
+	<button ng-click="pay()" title="pay">Pay</button>
+
+</div>
+
