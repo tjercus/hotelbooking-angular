@@ -1,25 +1,35 @@
-<!DOCTYPE html>
-<html ng-app="hotelbookingApp">
+﻿<!DOCTYPE html>
+<html ng-app="hotelbookingAM" data-framework="typescript">
 <head>
-	<title>Hotelbooking AngularJS version</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>angular (1 as 2) hotelbooking</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
 
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="lib/angular.min.js"></script>
-	<script src="js/application.js"></script>
-
-	<!-- Bootstrap -->
-	<link href="css/clear.css" rel="stylesheet" media="screen">
-	<link href="css/screen.css" rel="stylesheet" media="screen">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="css/clear.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <!-- endbuild -->
 </head>
 <body>
+    <ui-view></ui-view>
 
-<header>
-	<h1>Hotel booking</h1>
-</header>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/plugins.js -->
 
-<article class="container" ng-view>
-</article>
-
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="../.tmp/js/app/output.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

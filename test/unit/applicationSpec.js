@@ -8,7 +8,7 @@ var three = {id: 3, name: "three", price: 3};
 var offers = [one, two, three];
 
 describe('offersModel', function() {
-	beforeEach(module('hotelbookingApp'));
+	beforeEach(module('hotelbooking'));
 
 	describe('when addOfferToCart', function() {
 		it('should add an offer to cart', inject(function(offersModel) {
@@ -54,7 +54,7 @@ describe('offersModel', function() {
 describe('offersController', function() {
 	var scope, offersModel;
 
-	beforeEach(module('hotelbookingApp'));
+	beforeEach(module('hotelbooking'));
 	beforeEach(inject(function($rootScope, $controller) {
 		scope = $rootScope.$new();
 		$controller('offersController', {$scope: scope});

@@ -1,0 +1,12 @@
+<section id="offers" ng-controller="OffersController as oc">
+    <h2>Offers</h2>
+
+    <ul id="offers-list">
+        <li ng-repeat="offer in oc.offers track by $index">
+            <a ng-click="oc.addOfferToCart(offer)">{{offer.name}} for {{offer.price}}</a>
+        </li>
+    </ul>
+
+    <a href="#/cart">Go to Cart</a>
+
+</section>

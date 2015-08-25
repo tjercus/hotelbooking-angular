@@ -1,0 +1,15 @@
+<section ng-controller="CartController as cc">
+    <h2>Your cart</h2>
+
+    <ul id="cart-list">
+        <li ng-repeat="offer in cart track by $index">
+            <a href='#' ng-click="cc.removeOfferFromCart(offer)">remove</a> {{offer.name}} for {{offer.price}}
+        </li>
+    </ul>
+
+    <p id="amount-container">Amount: {{cc.amount}}</p>
+
+    <button ng-click="cc.pay()" title="pay">Pay</button>
+
+    <a href="#/offers">Go to Offers</a>
+</section>
