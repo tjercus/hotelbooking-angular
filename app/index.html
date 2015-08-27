@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>angular (1 as 2) hotelbooking</title>
-    <meta name="description" content="">
+    <meta name="description" content="angularjs forward looking to 2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -11,12 +11,27 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="css/clear.css">
+    <link rel="stylesheet" href="../bower_components/pure/base-min.css">
+    <link rel="stylesheet" href="../bower_components/pure/pure-min.css">
     <link rel="stylesheet" href="css/screen.css">
     <!-- endbuild -->
 </head>
 <body>
-    <ui-view></ui-view>
+
+    <header>
+        <nav class="pure-menu pure-menu-horizontal">
+            <a href="#" class="pure-menu-heading">HOTELBOOKING</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#/offers" class="pure-menu-link">Offers</a></li>
+                <li class="pure-menu-item"><a href="#/cart" class="pure-menu-link">Cart</a></li>
+                <li class="pure-menu-item"><a href="#/someform" class="pure-menu-link">Some form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <ui-view></ui-view>
+    </article>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -33,3 +48,4 @@
     <!-- endbuild -->
 </body>
 </html>
+

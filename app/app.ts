@@ -28,7 +28,8 @@ module app {
                 templateUrl: "hotelbooking/cart.html",
 
                 onEnter: function() {
-                    hotelbooking.CartController.pay();
+                    //hotelbooking.CartController.pay();
+                    console.log("onEnter event on cart state/route");
                 }
             })
     });

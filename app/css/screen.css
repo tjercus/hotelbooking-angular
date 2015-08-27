@@ -1,8 +1,61 @@
 
+/* #535657 (dark gray) */
+/* #f9b022 (dark yellow) */
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Capita-Light', serif;
+    font-size: 16px;
+    color: #535657;
+    background-color: white;
+}
+h1,h2,h3,h4, h5, h6 {
+    font-family: 'Cachet', 'Ubuntu', sans-serif;
+    margin: 0 0 1em 0;
+    padding:0;
+    font-weight:400;
+    color:#666965;
+}
 h1 {
+    font-size: 3em;
+    font-weight: 300;
+}
+h2 {
+    font-size:2em;
+    font-weight: bold;
+    margin: 0.5em 0 0.5em 0;
+    color: #666965;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+header {
+    font-family: 'Cachet', 'Ubuntu', sans-serif;
+}
+
+article {
+    margin: 1em;
+}
+
+.pure-menu {
+    background-color: #535657;
+    padding: 1.5em;
+}
+.pure-menu-heading, .pure-menu-link {
+    color: white;
     font-size: 1.1em;
 }
 
-h2 {
-    font-size: 1em;
+.pure-menu-link a:hover a:active, a:focus{
+    color: #535657 !important;
+    background-color: #f9b022 !important;
+}
+
+.pure-table thead th {
+    background-color: #f9b022;
 }

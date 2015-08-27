@@ -1,12 +1,12 @@
 {
   "name": "angular-hotelbooking",
-  "version": "0.0.0",
+  "version": "2.0.1",
   "description": "AngularJS forward looking",
   "license": "MIT",
   "main": "app/app.ts",
   "repository": {
     "type": "git",
-    "url": "angular-hotelbooking"
+    "url": "https://github.com/tjercus/hotelbooking-angular/"
   },
   "keywords": [
     "seed",
