@@ -1,0 +1,66 @@
+<section id="offers" ng-controller="RegistrationController as rc">
+
+    <form id="person-form" ng-show="currentFormPart === 'person'" class="pure-form pure-form-stacked" novalidate>
+        <fieldset>
+            <legend>Who are you?</legend>
+
+            <label for="name">Name</label>
+            <input id="name" type="text" ng-model="user.name" />
+
+            <label for="state">State</label>
+            <select id="state" ng-model="user.state">
+                <option>AL</option>
+                <option>CA</option>
+                <option>IL</option>
+            </select>
+
+            <label for="gender">Gender</label>
+            <input id="gender" type="radio" ng-model="user.gender" value="male" />male
+            <input type="radio" ng-model="user.gender" value="female" />female
+
+            <nav>
+                <ul>
+                    <li><a ng-click="goPrevious()" class="pure-button">Previous</a></li>
+                    <li><a ng-click="goNext()" class="pure-button pure-button-primary">Next</a></li>
+                </ul>
+            </nav>
+
+        </fieldset>
+    </form>
+
+    <form id="contact-form" ng-show="currentFormPart === 'contact'" class="pure-form pure-form-stacked" novalidate>
+        <fieldset>
+            <legend>How can we contact you?</legend>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" ng-model="user.email" placeholder="Email" />
+
+            <label for="telephone">Telephone</label>
+            <input id="telephone" type="tel" ng-model="user.telephone" placeholder="Telephone" />
+
+            <nav>
+                <ul>
+                    <li><a ng-click="goPrevious()" class="pure-button">Previous</a></li>
+                    <li><a ng-click="goNext()" class="pure-button pure-button-primary">Next</a></li>
+                </ul>
+            </nav>
+        </fieldset>
+    </form>
+
+    <form id="payment-form" ng-show="currentFormPart === 'payment'" class="pure-form pure-form-stacked" novalidate>
+        <fieldset>
+            <legend>How would you like to pay?</legend>
+
+            <label for="creditcard">Creditcard</label>
+            <input id="creditcard" type="number" ng-model="user.creditcard" placeholder="Creditcard" />
+
+            <nav>
+                <ul>
+                    <li><a ng-click="goPrevious()" class="pure-button">Previous</a></li>
+                    <li><a ng-click="goNext()" class="pure-button pure-button-primary">Next</a></li>
+                </ul>
+            </nav>
+        </fieldset>
+    </form>
+
+</section>

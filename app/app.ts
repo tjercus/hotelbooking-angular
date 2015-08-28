@@ -14,6 +14,7 @@ module app {
 
     hotelbookingAM.controller('OffersController', hotelbooking.OffersController)
     hotelbookingAM.controller('CartController', hotelbooking.CartController);
+    hotelbookingAM.controller('RegistrationController', hotelbooking.RegistrationController);
 
     hotelbookingAM.config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/offers");
@@ -31,6 +32,10 @@ module app {
                     //hotelbooking.CartController.pay();
                     console.log("onEnter event on cart state/route");
                 }
+            })
+            .state('registration', {
+                url: "/registration",
+                templateUrl: "hotelbooking/registration.html"
             })
     });
 }

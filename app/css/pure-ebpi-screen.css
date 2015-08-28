@@ -52,12 +52,22 @@ table {
     background-color: white;
 }
 
+nav ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
 /* overriding purecss style classes */
 
 .pure-menu {
     background-color: #666965;
     padding: 1.5em;
 }
+
 .pure-menu-heading, .pure-menu-link {
     color: white;
     font-size: 1.1em;
