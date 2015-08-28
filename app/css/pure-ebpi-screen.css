@@ -1,5 +1,5 @@
 
-/* #535657 (dark gray) */
+/* #666965 (dark gray) */
 /* #f9b022 (dark yellow) */
 
 html, body {
@@ -10,8 +10,9 @@ body {
     padding: 0;
     font-family: 'Capita-Light', serif;
     font-size: 16px;
-    color: #535657;
-    background-color: white;
+    color: #666965;
+    background-image: url("../img/watermark.png");
+    background-size: cover;
 }
 h1,h2,h3,h4, h5, h6 {
     font-family: 'Cachet', 'Ubuntu', sans-serif;
@@ -42,8 +43,19 @@ article {
     margin: 1em;
 }
 
+form label {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+table {
+    background-color: white;
+}
+
+/* overriding purecss style classes */
+
 .pure-menu {
-    background-color: #535657;
+    background-color: #666965;
     padding: 1.5em;
 }
 .pure-menu-heading, .pure-menu-link {
@@ -52,7 +64,7 @@ article {
 }
 
 .pure-menu-link a:hover a:active, a:focus{
-    color: #535657 !important;
+    color: #666965 !important;
     background-color: #f9b022 !important;
 }
 
