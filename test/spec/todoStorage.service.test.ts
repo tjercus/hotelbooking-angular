@@ -1,5 +1,5 @@
-﻿/// <reference path='../setup.ts' /> 
-
+﻿/// <reference path='../setup.ts' />
+/*
 describe('TodoStorage service', () => {
 
     var todoStorage: todos.ITodoStorage;
@@ -47,3 +47,4 @@ describe('TodoStorage service', () => {
     });
 
 });
+*/

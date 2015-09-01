@@ -1,44 +1,34 @@
-/// <reference path='../setup.ts' /> 
+/// <reference path='../setup.ts' />
 
-describe('Todo controller', () => {
+describe('OffersController', () => {
 
     var ctrlCtor: ng.IControllerService;
-    var scope: todos.ITodoScope;
-    var location: ng.ILocationService;
-    var todoStorage: todos.ITodoStorage;
-    var filterFilter;
+    var scope: hotelbooking.OfferScope;
 
-    var todoCtrl: todos.TodoCtrl;
+    var offersController: hotelbooking.OffersController;
+    var service: hotelbooking.HotelbookingService;
 
-    beforeEach(module('todomvc'));
+    beforeEach(module('hotelbooking'));
 
     beforeEach(inject((
         $controller: ng.IControllerService,
-        $rootScope: ng.IRootScopeService,
-        $location: ng.ILocationService,
-        _todoStorage_: todos.TodoStorage,
-        _filterFilter_) => {
+        _service_: hotelbooking.HotelbookingService
+       ) => {
         ctrlCtor = $controller;
-        scope = <todos.ITodoScope>$rootScope.$new();
-        location = $location;
-        todoStorage = _todoStorage_;
-        filterFilter = _filterFilter_;
+        scope = <hotelbooking.OfferScope>$rootScope.$new();
+            service = _service_;
         })
     );
 
     it('should create itself', () => {
-
-        todoCtrl = ctrlCtor(
-            'todoCtrl', {
+        offersController = ctrlCtor(
+            'offersController', {
                 $scope: scope,
-                $location: location,
-                todoStorage: todoStorage,
-                filterFilter: filterFilter
+                hotelbookingService: service
             });
 
-        expect(todoCtrl).to.be.not.null;
-        expect(typeof scope.newTodo).to.equal('string');
-
+        expect(offersController).to.be.not.null;
+        //expect(typeof scope.offer).to.equal('string');
     });
 
-}); 
+});

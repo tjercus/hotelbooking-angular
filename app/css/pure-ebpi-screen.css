@@ -61,6 +61,10 @@ nav ul li {
     display: inline;
 }
 
+dl dt {
+    font-weight: bold;
+}
+
 /* overriding purecss style classes */
 
 .pure-menu {

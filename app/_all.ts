@@ -10,6 +10,7 @@
 
 /// <reference path='hotelbooking/RegistrationController.ts' />
 /// <reference path='hotelbooking/RegistrationScope.ts' />
+/// <reference path='hotelbooking/User.ts' />
 
 /// <reference path='hotelbooking/HotelbookingService.ts' />
 /// <reference path='hotelbooking/HotelbookingServiceImpl.ts' />
