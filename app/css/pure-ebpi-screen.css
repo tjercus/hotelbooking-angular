@@ -85,3 +85,11 @@ dl dt {
 .pure-table thead th {
     background-color: #f9b022;
 }
+
+.section-show-start {
+    background-color: yellow;
+}
+
+.section-show-hide {
+    background-color: red;
+}

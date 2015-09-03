@@ -1,4 +1,4 @@
-/// <reference path='../all.ts' />
+/// <reference path='../_all.ts' />
 'use strict';
 module hotelbooking {
 
