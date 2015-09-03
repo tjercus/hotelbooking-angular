@@ -1,6 +1,8 @@
-/// <reference path='../_all.ts' />
+/// <reference path='../../_all.ts' />
 'use strict';
-module hotelbooking {
+module components.cart {
+
+	import Offer = components.offers.Offer;
 
     export class CartController {
         private cart: Offer[] = [];

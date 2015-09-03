@@ -1,6 +1,6 @@
-/// <reference path='../_all.ts' />
+/// <reference path='../../_all.ts' />
 'use strict';
-module hotelbooking {
+module components.registration {
 
     export interface RegistrationScope extends ng.IScope {
         //

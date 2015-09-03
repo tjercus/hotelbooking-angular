@@ -65,6 +65,10 @@ dl dt {
     font-weight: bold;
 }
 
+fieldset {
+    margin-bottom: 0.5em;
+}
+
 /* overriding purecss style classes */
 
 .pure-menu {
@@ -84,12 +88,4 @@ dl dt {
 
 .pure-table thead th {
     background-color: #f9b022;
-}
-
-.section-show-start {
-    background-color: yellow;
-}
-
-.section-show-hide {
-    background-color: red;
 }

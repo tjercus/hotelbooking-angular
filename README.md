@@ -1,30 +1,15 @@
 
+Based on https://github.com/florinn/angular-typescript-gulp-seed, thanks and credits for setting up the skeleton to build on.  
+
 ### Install dependencies
-
-There are two kinds of dependencies in this project: tools and application specific. The tools help manage and test the application.
-
-> You can get the tools the project depends upon via [npm](https://www.npmjs.org/):
 
 > ``` 
 > npm install
-> ```
-
-> You can get the app specific dependencies via Bower:
-
-> ```
 > bower install
 > ```
 
-You should find that you have some new folders in your project:
-
-* `node_modules` - contains the npm packages for the tools
-* `bower_components` - contains app specific dependencies
-
-> **Note:** The `bower_components` folder would normally be installed in the root folder but you may change this location through the `.bowerrc` file.
-
-
 Build and Run the Application
--------------
+-----------------------------
 
 The project is preconfigured with a simple development web server. The simplest way to start this server is:
 
@@ -32,9 +17,7 @@ The project is preconfigured with a simple development web server. The simplest 
 gulp serve
 ```
 
-----------
-
-At development time, you should have in the background all the time:
+Or
 
 ```
 gulp watch

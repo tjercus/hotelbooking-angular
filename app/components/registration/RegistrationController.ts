@@ -1,6 +1,8 @@
-/// <reference path='../_all.ts' />
+/// <reference path='../../_all.ts' />
 'use strict';
-module hotelbooking {
+module components.registration {
+
+	import User = components.registration.User;
 
     export class RegistrationController {
         public static $inject = ['$scope'];

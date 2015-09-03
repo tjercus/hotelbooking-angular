@@ -1,27 +1,30 @@
 ﻿/// <reference path='../_all.ts' />
 'use strict';
-module hotelbooking {
+module components {
+
+	import Offer = components.offers.Offer;
+
     /**
     * Services that persists and retrieves from localStorage.
     */
     export class HotelbookingServiceImpl implements HotelbookingService {
         STORAGE_ID = 'hotelbooking';
 
-        getOffers(): hotelbooking.Offer[] {
+        getOffers(): Offer[] {
             return JSON.parse(localStorage.getItem(this.STORAGE_ID + "_offers") || '[]');
         }
 
-        putOffers(offers: hotelbooking.Offer[]):void {
+        putOffers(offers: Offer[]):void {
             localStorage.setItem(this.STORAGE_ID + "_offers", JSON.stringify(offers));
         }
 
-        addOffer(offer: hotelbooking.Offer): void {
+        addOffer(offer: Offer): void {
             let offers = this.getOffers();
             offers.push(offer);
             this.putOffers(offers);
         }
 
-        getCart(): hotelbooking.Offer[] {
+        getCart(): Offer[] {
             return JSON.parse(localStorage.getItem(this.STORAGE_ID + "_cart") || '[]');
         }
 
@@ -29,7 +32,7 @@ module hotelbooking {
             localStorage.setItem(this.STORAGE_ID + "_cart", JSON.stringify(cart));
         }
 
-        addOfferToCart(offer:hotelbooking.Offer):void {
+        addOfferToCart(offer: Offer):void {
             let cart = this.getCart();
             cart.push(offer)
             this.putCart(cart);

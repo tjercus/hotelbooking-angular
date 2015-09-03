@@ -1,62 +1,69 @@
 <section id="offers" ng-controller="RegistrationController as rc">
 
     <form id="person-form" ng-show="rc.currentFormPart === 'person'" class="pure-form pure-form-stacked" novalidate>
+        <legend>Who are you?</legend>
+
         <fieldset>
-            <legend>Who are you?</legend>
-
             <label for="name">Name</label>
-            <input id="name" type="text" ng-model="rc.user.name" />
+            <input id="name" type="text" ng-model="rc.user.name"/>
+        </fieldset>
 
+        <fieldset>
             <label for="gender">Gender</label>
-            <input id="gender" type="radio" ng-model="rc.user.gender" value="male" />male
-            <input type="radio" ng-model="rc.user.gender" value="female" />female
+            <input id="gender" type="radio" ng-model="rc.user.gender" value="male"/> male
+            <input type="radio" ng-model="rc.user.gender" value="female"/> female
+        </fieldset>
 
+        <fieldset>
             <label for="state">State</label>
             <select id="state" ng-model="rc.user.state">
                 <option>AL</option>
                 <option>CA</option>
                 <option>IL</option>
             </select>
-
         </fieldset>
     </form>
 
     <form id="contact-form" ng-show="rc.currentFormPart === 'contact'" class="pure-form pure-form-stacked" novalidate>
+        <legend>How can we contact you?</legend>
+
         <fieldset>
-            <legend>How can we contact you?</legend>
-
             <label for="email">Email</label>
-            <input id="email" type="text" ng-model="rc.user.email" placeholder="Email" />
+            <input id="email" type="text" ng-model="rc.user.email" placeholder="Email"/>
+        </fieldset>
 
+        <fieldset>
             <label for="phone">Telephone</label>
-            <input id="phone" type="tel" ng-model="rc.user.phone" placeholder="Telephone" />
-
+            <input id="phone" type="tel" ng-model="rc.user.phone" placeholder="Telephone"/>
         </fieldset>
     </form>
 
     <form id="payment-form" ng-show="rc.currentFormPart === 'payment'" class="pure-form pure-form-stacked" novalidate>
+        <legend>How would you like to pay?</legend>
+
         <fieldset>
-            <legend>How would you like to pay?</legend>
-
             <label for="creditcard">Creditcard</label>
-            <input id="creditcard" type="number" ng-model="rc.user.creditcard" placeholder="Creditcard" />
-
+            <input id="creditcard" type="number" ng-model="rc.user.creditcard" placeholder="Creditcard"/>
         </fieldset>
     </form>
 
     <section id="summary-form" ng-show="rc.currentFormPart === 'summary'" class="pure-form pure-form-stacked" novalidate>
+        <legend>Summary</legend>
         <fieldset>
-            <legend>Summary</legend>
-
             <dl>
-                <dt>Name</dt><dd>{{rc.user.name}}</dd>
-                <dt>Gender</dt><dd>{{rc.user.gender}}</dd>
-                <dt>State</dt><dd>{{rc.user.state}}</dd>
-                <dt>Email</dt><dd>{{rc.user.email}}</dd>
-                <dt>Telephone</dt><dd>{{rc.user.phone}}</dd>
-                <dt>Name</dt><dd>{{rc.user.creditcard}}</dd>
+                <dt>Name</dt>
+                <dd>{{rc.user.name}}</dd>
+                <dt>Gender</dt>
+                <dd>{{rc.user.gender}}</dd>
+                <dt>State</dt>
+                <dd>{{rc.user.state}}</dd>
+                <dt>Email</dt>
+                <dd>{{rc.user.email}}</dd>
+                <dt>Telephone</dt>
+                <dd>{{rc.user.phone}}</dd>
+                <dt>Name</dt>
+                <dd>{{rc.user.creditcard}}</dd>
             </dl>
-
         </fieldset>
     </section>
 

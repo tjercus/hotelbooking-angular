@@ -1,5 +1,7 @@
 ﻿/// <reference path='../_all.ts' />
-module hotelbooking {
+module components {
+
+	import Offer = components.offers.Offer;
 
     export interface HotelbookingService {
         getOffers(): Offer[];
@@ -9,6 +11,6 @@ module hotelbooking {
         putCart(offers: Offer[]): void; // could be private
         addOfferToCart(offer: Offer): void;
         getCartAmount(): number;
-        removeOfferFromCart(offer: Offer) : Offer[];
+        removeOfferFromCart(offer: Offer): Offer[];
     }
 }
