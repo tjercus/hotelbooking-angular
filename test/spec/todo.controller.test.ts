@@ -3,20 +3,21 @@
 describe('OffersController', () => {
 
     var ctrlCtor: ng.IControllerService;
-    var scope: hotelbooking.OfferScope;
+    var scope: components.offers.OfferScope;
 
-    var offersController: hotelbooking.OffersController;
-    var service: hotelbooking.HotelbookingService;
+    var offersController: components.offers.OffersController;
+    var service: components.HotelbookingService;
 
-    beforeEach(module('hotelbooking'));
+    beforeEach(angular.module('hotelbookingAM'));
 
     beforeEach(inject((
         $controller: ng.IControllerService,
-        _service_: hotelbooking.HotelbookingService
+        $rootScope: ng.IRootScopeService,
+        _service_: components.HotelbookingService
        ) => {
-        ctrlCtor = $controller;
-        scope = <hotelbooking.OfferScope>$rootScope.$new();
-            service = _service_;
+            ctrlCtor = $controller;
+            scope = <components.offers.OfferScope>$rootScope.$new();
+		    service = _service_;
         })
     );
 
@@ -27,7 +28,7 @@ describe('OffersController', () => {
                 hotelbookingService: service
             });
 
-        expect(offersController).to.be.not.null;
+        //assert(offersController);
         //expect(typeof scope.offer).to.equal('string');
     });
 

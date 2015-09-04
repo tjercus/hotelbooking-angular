@@ -333,12 +333,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/bower_components/slick-angular-validation/dist/slick-angular-validation.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/gulpfile.js">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/karma.conf.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/test/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/test/setup.ts">
           <value>
             <set />
           </value>

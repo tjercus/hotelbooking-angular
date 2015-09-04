@@ -19,10 +19,14 @@ module components.registration {
          */
         private currentFormPart: string = this.formParts[0];
 
-        private user: User = new User();
+	    /**
+	     * variable is instantiated and used by the View/Template
+	     */
+	    private user: User;
 
         constructor(private $scope: RegistrationScope) {
             console.log("RegistrationController: constructor: " + this.currentFormPart);
+	        this.user = new registration.User();
         }
 
         goPrevious() {
@@ -42,7 +46,26 @@ module components.registration {
 
         goNext() {
             // 1. validate
-            // TODO
+	        if (this.user === undefined) {
+		        console.log("user is undefined");
+		        return;
+	        }
+
+	        if (this.currentFormPart === "person") {
+		        if (!this.user.validateName()) {
+			        console.log("user.name is null");
+			        return;
+		        } else {
+			        console.log("user.name is " + this.user.name);
+		        }
+	        }
+
+	        if (this.currentFormPart === "contact") {
+		        if (!this.user.validateEmail()) {
+			        console.log("user.email is not valid");
+			        return;
+		        }
+	        }
 
             // 2. calculate nextPart
             let currentIndex = this.formParts.indexOf(this.currentFormPart);

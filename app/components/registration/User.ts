@@ -3,20 +3,24 @@
 module components.registration {
 
     export class User {
-        private id : string;
+        public  id : string;
 
-        private name: string;
-        private state: string; // enum
-        private gender: string; // enum
+        public  name: string;
+        public  state: string; // enum
+        public  gender: string; // enum
 
-        private email: string;
-        private phone: number;
+        public  email: string;
+        public  phone: number;
 
-        private creditcard: number;
+        public  creditcard: number;
 
-        constructor() {
-            //
-        }
+	    public validateName() : boolean {
+		    return !(this.name === undefined || this.name === null || this.name === "" && this.name.length === 0);
+	    }
+
+	    public validateEmail() : boolean {
+		    return !(this.email === undefined || this.email === null || this.email.indexOf("@") !== -1);
+	    }
 
         public setId(value:string) {
             this.id = value;

@@ -4,9 +4,14 @@
 		basePath: '',
 
 		// frameworks to use
-		frameworks: ['mocha', 'chai', 'chai-sinon'],
+		frameworks: ['mocha'],
 
-		files: [],
+		files: [
+			"bower_components/angular/angular.js",
+			"bower_components/angular-ui-router/release/angular-ui-router.js",
+			"app/js/**/*.js",
+			"test/**/*Spec.js"
+		],
 
 		// list of files to exclude
 		exclude: [],
@@ -36,7 +41,7 @@
 		// - Safari (only Mac)
 		// - PhantomJS
 		// - IE (only Windows)
-		browsers: ['Chrome', 'Firefox', 'IE'],
+		browsers: ['Chrome'], // ['Chrome', 'Firefox', 'IE'],
 
 		// If browser does not capture in given timeout [ms], kill it
 		captureTimeout: 60000,
