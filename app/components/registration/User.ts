@@ -2,24 +2,34 @@
 'use strict';
 module components.registration {
 
+	export enum Gender {Male, Female};
+	export enum State {ZH, NH, ZE, UT};
+
     export class User {
         public  id : string;
-
         public  name: string;
-        public  state: string; // enum
-        public  gender: string; // enum
-
+        public  state: State;
+        public  gender: Gender;
         public  email: string;
         public  phone: number;
-
         public  creditcard: number;
 
-	    public validateName() : boolean {
-		    return !(this.name === undefined || this.name === null || this.name === "" && this.name.length === 0);
+	    public validateName() : Result {
+		    let result = new Result();
+		    if (this.name === undefined || this.name === null || this.name === "" && this.name.length === 0) {
+			    result.addErrorMessage("name is required");
+		    }
+		    return result;
 	    }
 
-	    public validateEmail() : boolean {
-		    return !(this.email === undefined || this.email === null || this.email.indexOf("@") !== -1);
+	    public validateEmail() : Result {
+		    let result = new Result();
+		    if (this.email === undefined || this.email === null) {
+			    result.addErrorMessage("email is required");
+		    } else if(this.email.indexOf("@") === -1) {
+			    result.addErrorMessage("email pattern is not ok");
+		    }
+		    return result;
 	    }
 
         public setId(value:string) {
@@ -30,11 +40,11 @@ module components.registration {
             this.name = value;
         }
 
-        public setState(value:string) {
+        public setState(value:State) {
             this.state = value;
         }
 
-        public setGender(value:string) {
+        public setGender(value:Gender) {
             this.gender = value;
         }
 

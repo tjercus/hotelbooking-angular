@@ -1,5 +1,18 @@
 
-Based on https://github.com/florinn/angular-typescript-gulp-seed, thanks and credits for setting up the skeleton to build on.  
+Based on https://github.com/florinn/angular-typescript-gulp-seed, thanks and credits for setting up the skeleton to build on.
+
+### What does it show?
+
+This application is by no means 'feature complete', 'best practise' or using all of Angular's abilities.
+
+It does show
+ * using a modern build chain with Gulp and TypeScript
+ * using Angular 1 so as to be able to migrate to Angular 2 with minor effort
+
+Notes
+ * validation is programmed into the components. I tried to use Anular's built in formvalidation and two higly regarded plugins
+  , but could not get them 100% working. Besides I prefer not to place validation logic in templates.
+
 
 ### Install dependencies
 
@@ -8,8 +21,7 @@ Based on https://github.com/florinn/angular-typescript-gulp-seed, thanks and cre
 > bower install
 > ```
 
-Build and Run the Application
------------------------------
+### Build and Run the Application
 
 The project is preconfigured with a simple development web server. The simplest way to start this server is:
 

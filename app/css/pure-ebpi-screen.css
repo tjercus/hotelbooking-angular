@@ -69,6 +69,17 @@ fieldset {
     margin-bottom: 0.5em;
 }
 
+*[role='alert'] {
+	border-radius: 0.3em;
+	border: 1px solid red;
+	background-color: #e4b9b9;
+	color: black;
+	font-weight: bold;
+	padding: 1em;
+	list-style: none;
+	width: 20%;
+}
+
 /* overriding purecss style classes */
 
 .pure-menu {

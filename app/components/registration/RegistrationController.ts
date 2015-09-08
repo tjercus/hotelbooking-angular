@@ -24,13 +24,22 @@ module components.registration {
 	     */
 	    private user: User;
 
+	    private errorMessages: Array<string> = [];
+
         constructor(private $scope: RegistrationScope) {
             console.log("RegistrationController: constructor: " + this.currentFormPart);
 	        this.user = new registration.User();
         }
 
         goPrevious() {
-            console.log("goPrevious");
+	        let result: Result = this.validate();
+	        if (result.hasError()) {
+		        this.errorMessages = result.getErrorMessages();
+		        console.log("errorMessages: " + this.errorMessages.length);
+		        return;
+	        } else {
+		        this.errorMessages = [];
+	        }
 
             let currentIndex = this.formParts.indexOf(this.currentFormPart);
             let previousPart = this.formParts[currentIndex - 1];
@@ -46,25 +55,13 @@ module components.registration {
 
         goNext() {
             // 1. validate
-	        if (this.user === undefined) {
-		        console.log("user is undefined");
+	        let result: Result = this.validate();
+	        if (result.hasError()) {
+		        this.errorMessages = result.getErrorMessages();
+		        console.log("errorMessages: " + this.errorMessages.length);
 		        return;
-	        }
-
-	        if (this.currentFormPart === "person") {
-		        if (!this.user.validateName()) {
-			        console.log("user.name is null");
-			        return;
-		        } else {
-			        console.log("user.name is " + this.user.name);
-		        }
-	        }
-
-	        if (this.currentFormPart === "contact") {
-		        if (!this.user.validateEmail()) {
-			        console.log("user.email is not valid");
-			        return;
-		        }
+	        } else {
+		        this.errorMessages = [];
 	        }
 
             // 2. calculate nextPart
@@ -81,5 +78,25 @@ module components.registration {
                 this.currentFormPart = nextPart;
             }
         }
+
+	    validate(): Result {
+		    let result: Result = new Result();
+
+		    if (this.currentFormPart === "person") {
+			    result = this.user.validateName();
+			    if (result.hasError()) {
+				    this.errorMessages = result.getErrorMessages();
+			    }
+		    }
+
+		    if (this.currentFormPart === "contact") {
+			    result = this.user.validateEmail();
+			    if (result.hasError()) {
+				    this.errorMessages = result.getErrorMessages();
+			    }
+		    }
+
+		    return result;
+	    }
     }
 }

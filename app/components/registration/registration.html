@@ -7,21 +7,29 @@
 
 			<fieldset>
 				<label for="name">Name</label>
-				<input id="name" name="user-name" type="text" ng-model="rc.user.name" validate="required" />
+				<input id="name" name="user-name" type="text" ng-model="rc.user.name" />
 			</fieldset>
 
 			<fieldset>
 				<label for="gender">Gender</label>
-				<input id="gender" type="radio" ng-model="rc.user.gender" value="male"/> male
-				<input type="radio" ng-model="rc.user.gender" value="female"/> female
+				<label for="gender" class="pure-radio">
+					<input id="gender" type="radio" ng-model="rc.user.gender" value="male"/>
+					male
+				</label>
+
+				<label for="gender" class="pure-radio">
+					<input type="radio" ng-model="rc.user.gender" value="female"/>
+					female
+				</label>
 			</fieldset>
 
 			<fieldset>
 				<label for="state">State</label>
 				<select id="state" ng-model="rc.user.state">
-					<option>AL</option>
-					<option>CA</option>
-					<option>IL</option>
+					<option>NH</option>
+					<option>ZH</option>
+					<option>ZE</option>
+					<option>UT</option>
 				</select>
 			</fieldset>
 		</section>
@@ -31,7 +39,7 @@
 
 			<fieldset>
 				<label for="email">Email</label>
-				<input id="email" name="user-email" type="text" ng-model="rc.user.email" validate="required|email" placeholder="Email" />
+				<input id="email" name="user-email" type="text" ng-model="rc.user.email" placeholder="Email" />
 			</fieldset>
 
 			<fieldset>
@@ -68,6 +76,10 @@
 				</dl>
 			</fieldset>
 		</section>
+
+		<ul ng-repeat="errorMessage in rc.errorMessages track by $index" role="alert">
+			<li>{{errorMessage}}</li>
+		</ul>
 
 		<nav>
 			<ul>

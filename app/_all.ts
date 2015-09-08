@@ -12,6 +12,8 @@
 /// <reference path='components/registration/RegistrationScope.ts' />
 /// <reference path='components/registration/User.ts' />
 
+/// <reference path='components/Result.ts' />
+
 /// <reference path='components/HotelbookingService.ts' />
 /// <reference path='components/HotelbookingServiceImpl.ts' />
 

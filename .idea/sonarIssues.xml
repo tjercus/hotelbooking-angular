@@ -58,6 +58,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../kis-platform/picore/api/src/main/java/nl/procesinfrastructuur/webservice/aflever/AfleverWebService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../kis-platform/picore/service/src/main/java/nl/procesinfrastructuur/service/impl/AanleverServiceImpl.java">
           <value>
             <set />
@@ -79,6 +84,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/.tmp/definitions/app/components/Result.d.ts">
           <value>
             <set />
           </value>
@@ -144,6 +154,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/components/RegistrationScope.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/components/Result.ts">
           <value>
             <set />
           </value>
