@@ -2,7 +2,7 @@
 'use strict';
 module components.registration {
 
-	import User = components.registration.User;
+	import User = components.user.User;
 
     export class RegistrationController {
         public static $inject = ['$scope'];
@@ -28,7 +28,7 @@ module components.registration {
 
         constructor(private $scope: RegistrationScope) {
             console.log("RegistrationController: constructor: " + this.currentFormPart);
-	        this.user = new registration.User();
+	        this.user = new user.User();
         }
 
         goPrevious() {

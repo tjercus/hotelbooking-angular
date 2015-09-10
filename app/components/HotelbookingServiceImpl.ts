@@ -55,5 +55,13 @@ module components {
             }
             return cart;
         }
+
+	    getUsers():components.user.User[] {
+		    return JSON.parse(localStorage.getItem(this.STORAGE_ID + "_users") || '[]');
+	    }
+
+	    putUsers(users:components.user.User[]):void {
+		    localStorage.setItem(this.STORAGE_ID + "_users", JSON.stringify(users));
+	    }
     }
 }

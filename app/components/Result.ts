@@ -13,7 +13,6 @@ module components {
 
 		public hasError():boolean {
 			return !(this.errorMessages.length === 0);
-			//return !this.errorMessages.isEmpty();
 		}
 
 		public getErrorMessages(): string[] {

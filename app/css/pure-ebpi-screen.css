@@ -22,17 +22,21 @@ h1,h2,h3,h4, h5, h6 {
     color:#666965;
 }
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 300;
 }
 h2 {
-    font-size:2em;
+    font-size:1.5em;
     font-weight: bold;
     margin: 0.5em 0 0.5em 0;
     color: #666965;
     position: relative;
     z-index: 1;
     display: block;
+}
+h3 {
+	font-size:1.25em;
+	margin: 0.5em 0 0.5em 0;
 }
 
 header {
@@ -71,8 +75,8 @@ fieldset {
 
 *[role='alert'] {
 	border-radius: 0.3em;
-	border: 1px solid red;
-	background-color: #e4b9b9;
+	border: 2px solid red;
+	background-color: #e38d13;
 	color: black;
 	font-weight: bold;
 	padding: 1em;

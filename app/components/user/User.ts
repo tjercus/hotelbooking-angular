@@ -1,18 +1,19 @@
 /// <reference path='../../_all.ts' />
 'use strict';
-module components.registration {
+module components.user {
 
 	export enum Gender {Male, Female};
 	export enum State {ZH, NH, ZE, UT};
 
     export class User {
-        public  id : string;
-        public  name: string;
         public  state: State;
         public  gender: Gender;
-        public  email: string;
+
         public  phone: number;
         public  creditcard: number;
+
+	    public constructor(public id?: string, public name?: string, public email?: string) {
+	    }
 
 	    public validateName() : Result {
 		    let result = new Result();

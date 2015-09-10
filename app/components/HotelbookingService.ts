@@ -2,6 +2,7 @@
 module components {
 
 	import Offer = components.offers.Offer;
+	import User = components.user.User;
 
     export interface HotelbookingService {
         getOffers(): Offer[];
@@ -12,5 +13,7 @@ module components {
         addOfferToCart(offer: Offer): void;
         getCartAmount(): number;
         removeOfferFromCart(offer: Offer): Offer[];
+	    getUsers(): User[];
+	    putUsers(users: User[]): void; // could be private
     }
 }

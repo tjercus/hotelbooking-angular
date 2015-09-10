@@ -10,7 +10,10 @@
 
 /// <reference path='components/registration/RegistrationController.ts' />
 /// <reference path='components/registration/RegistrationScope.ts' />
-/// <reference path='components/registration/User.ts' />
+
+/// <reference path='components/user/User.ts' />
+/// <reference path='components/user/UsersController.ts' />
+/// <reference path='components/user/UserEditController.ts' />
 
 /// <reference path='components/Result.ts' />
 
