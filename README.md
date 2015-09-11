@@ -8,10 +8,12 @@ This application is by no means 'feature complete', 'best practise' or using all
 It does show
  * using a modern build chain with Gulp and TypeScript
  * using Angular 1 so as to be able to migrate to Angular 2 with minor effort
+ * using a router (ui-router) which has comparable features to the one in Angular2 
 
 Notes
- * validation is programmed into the components. I tried to use Anular's built in formvalidation and two higly regarded plugins
+ * validation is programmed into the components. I tried to use Angular's built in formvalidation and two higly regarded plugins
   , but could not get them 100% working. Besides I prefer not to place validation logic in templates.
+ * unti testing, integration testing and functional testing is still under development
 
 
 ### Install dependencies
