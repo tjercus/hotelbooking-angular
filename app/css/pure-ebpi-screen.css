@@ -52,7 +52,7 @@ form label {
     text-transform: capitalize;
 }
 
-table {
+form, table {
     background-color: white;
 }
 

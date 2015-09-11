@@ -11,6 +11,8 @@ module components.user {
 
 		constructor(private $stateParams: any, private hotelbookingService: HotelbookingService) {
 			console.log("UserEditController.constructor: router passed user.id: " + $stateParams.id);
+
+			// TODO move lookup code to to service
 			let users: User[] = hotelbookingService.getUsers();
 			for (let user of users) {
 				if (user.id === $stateParams.id) {
@@ -20,7 +22,7 @@ module components.user {
 		}
 
 		saveUser() {
-			console.log("TODO save this.user to database");
+			alert("TODO save this.user to database");
 		}
 	}
 }
