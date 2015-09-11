@@ -15,5 +15,7 @@ module components {
         removeOfferFromCart(offer: Offer): Offer[];
 	    getUsers(): User[];
 	    putUsers(users: User[]): void; // could be private
+	    findUserById(id: string): User;
+	    saveUser(user: User): void;
     }
 }

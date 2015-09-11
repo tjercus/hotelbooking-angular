@@ -3,6 +3,7 @@
 module components {
 
 	import Offer = components.offers.Offer;
+	import User = components.user.User;
 
     /**
     * Services that persists and retrieves from localStorage.
@@ -56,12 +57,37 @@ module components {
             return cart;
         }
 
-	    getUsers():components.user.User[] {
+	    getUsers(): User[] {
 		    return JSON.parse(localStorage.getItem(this.STORAGE_ID + "_users") || '[]');
 	    }
 
-	    putUsers(users:components.user.User[]):void {
+	    putUsers(users: User[]):void {
 		    localStorage.setItem(this.STORAGE_ID + "_users", JSON.stringify(users));
+	    }
+
+	    findUserById(id: string): User {
+		    let users: User[] = this.getUsers();
+		    for (let user of users) {
+			    if (user.id === id) {
+				    return user;
+			    }
+		    }
+		    return null;
+	    }
+
+	    saveUser(user: User): void {
+		    let users: User[] = this.getUsers();
+		    for (let i = 0, len = users.length; i < len; i++) {
+			    console.log("users: " + users.length);
+			    let _user = users[i];
+			    if (_user.id === user.id) {
+				    console.log("user found with id " + _user.id);
+				    users[i] = user;
+				    break;
+			    }
+			    console.log("user not found with id " + _user.id);
+		    }
+		    this.putUsers(users);
 	    }
     }
 }
