@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Capita-Light', serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #666965;
     background-image: url("../img/watermark.png");
     background-size: cover;
@@ -48,11 +48,11 @@ article {
 }
 
 form label {
-    font-weight: bold;
-    text-transform: capitalize;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
-form, table {
+table {
     background-color: white;
 }
 
@@ -86,6 +86,11 @@ fieldset {
 
 /* overriding purecss style classes */
 
+.pure-button-primary {
+	background-color: #f9b022;
+	color: #666965;
+}
+
 .pure-menu {
     background-color: #666965;
     padding: 1.5em;
@@ -96,7 +101,7 @@ fieldset {
     font-size: 1.1em;
 }
 
-.pure-menu-link a:hover a:active, a:focus{
+.pure-menu-link:hover, .pure-menu-link:active, .pure-menu-link:focus{
     color: #666965 !important;
     background-color: #f9b022 !important;
 }

@@ -40,7 +40,14 @@ module app {
             })
 	        .state("users", {
 		        url: "/users",
-		        templateUrl: "components/user/users.html"
+		        views: {
+			        "": {
+				        templateUrl: "components/user/users.html",
+				        controllerProvider: function($rootScope) {
+					        return "UsersController";
+				        }
+			        }
+		        }
 	        })
 	        /* users.edit creates an url relative to '/users' */
 	        .state("users.edit", {
@@ -48,10 +55,14 @@ module app {
 		        views: {
 			        "userEdit": {
 				        templateUrl: "components/user/userEdit.html",
-				        controllerProvider: function($stateParams) {
+				        controllerProvider: function($stateParams, $rootScope) {
 					        return "UserEditController";
 				        }
 			        }
+		        },
+		        onEnter: function() {
+			        console.log("onEnter event on users.edit state/route");
+			        //this.controller.onEnter(); // does not work
 		        }
 	        })
     });
